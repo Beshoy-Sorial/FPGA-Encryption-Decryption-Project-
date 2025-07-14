@@ -1,0 +1,17 @@
+module ERound(input [127:0]in,input [127:0]key,output [127:0]out);
+
+wire [127:0]out1;
+wire [127:0]out2;
+wire [127:0]out3;
+wire [127:0]out4;
+  
+  subBytes sb(in,out1); 
+  ShiftRows sr(out1,out2);
+  mixColumns mc(out2,out3);
+  addRoundKey ar(out3,key,out4);
+
+assign out = out4;
+
+
+endmodule
+

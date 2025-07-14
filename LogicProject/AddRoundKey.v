@@ -1,0 +1,3 @@
+module addRoundKey(input [0:127]state,input [0:127]key,output  [0:127] out );
+ assign out = state ^ key;
+endmodule

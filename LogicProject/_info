@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/ModelSim
+vpro
+Z0 !s110 1715420820
+!i10b 1
+!s100 E95UG_imgUd;CHhENHzK13
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ID=KloJIa^=]BU_U7PSAaL1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+dE:/
+Z3 w1713951230
+Z4 8E:/ModelSim/LogicProject/pro.v
+Z5 FE:/ModelSim/LogicProject/pro.v
+!i122 2
+L0 28 28
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1715420820.000000
+!s107 E:/ModelSim/LogicProject/pro.v|
+Z8 !s90 -reportprogress|300|-work|work|E:/ModelSim/LogicProject/pro.v|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vShiftRegister
+R0
+!i10b 1
+!s100 0_E=XBRQ`0=B90edX7cYh1
+R1
+IzZa3KG9Dej[j3bkcNIb1J3
+R2
+dE:/
+R3
+R4
+R5
+!i122 2
+L0 1 24
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 E:/ModelSim/LogicProject/pro.v|
+R8
+!i113 1
+R9
+R10
+n@shift@register

@@ -1,0 +1,101 @@
+E:/ModelSim/LogicProject/BCD.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\BCD.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bin2bcd
+-- Compiling module segment7
+
+Top level modules:
+	bin2bcd
+	segment7
+
+} {} {}} E:/ModelSim/LogicProject/ShiftRows.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\ShiftRows.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ShiftRows
+
+Top level modules:
+	ShiftRows
+
+} {} {}} E:/ModelSim/LogicProject/SubBytes.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\SubBytes.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module subBytes
+
+Top level modules:
+	subBytes
+
+} {} {}} E:/ModelSim/LogicProject/Decrypt.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\Decrypt.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Decrypt
+
+Top level modules:
+	Decrypt
+
+} {} {}} E:/ModelSim/LogicProject/Manager.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\Manager.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Manager
+
+Top level modules:
+	Manager
+
+} {} {}} E:/ModelSim/LogicProject/InvMixColumns.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\InvMixColumns.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InvMixColumns
+
+Top level modules:
+	InvMixColumns
+
+} {} {}} E:/ModelSim/LogicProject/Encrypt.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\Encrypt.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Encrypt
+
+Top level modules:
+	Encrypt
+
+} {} {}} E:/ModelSim/LogicProject/ERound.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\ERound.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ERound
+
+Top level modules:
+	ERound
+
+} {} {}} E:/ModelSim/LogicProject/InvSubBytes.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\InvSubBytes.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InvsubBytes
+
+Top level modules:
+	InvsubBytes
+
+} {} {}} E:/ModelSim/LogicProject/AddRoundKey.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\AddRoundKey.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module addRoundKey
+
+Top level modules:
+	addRoundKey
+
+} {} {}} E:/ModelSim/LogicProject/DRound.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\DRound.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module DRound
+
+Top level modules:
+	DRound
+
+} {} {}} E:/ModelSim/LogicProject/keyExpansion.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\keyExpansion.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module KeyExpansion
+
+Top level modules:
+	KeyExpansion
+
+} {} {}} E:/ModelSim/LogicProject/InvShiftRows.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\InvShiftRows.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InvShiftRows
+
+Top level modules:
+	InvShiftRows
+
+} {} {}} E:/ModelSim/LogicProject/MixColumns.v {1 {vlog -work work -stats=none {E:\ModelSim\LogicProject\MixColumns.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mixColumns
+
+Top level modules:
+	mixColumns
+
+} {} {}}

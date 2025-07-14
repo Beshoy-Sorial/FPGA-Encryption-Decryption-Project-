@@ -1,0 +1,65 @@
+module  Decrypt#(parameter Nk,parameter Nr)(input [127:0]in,input [32*Nk-1:0]key,output reg[127:0]state,input clk,reset,input s1,s2);
+
+wire [(128*(Nr+1))-1 :0] word;
+reg[127:0]a1;
+wire[127:0]a2;
+wire[127:0]a3;
+reg[127:0]a4;
+
+wire[127:0]b1;
+wire[127:0]b2;
+wire[127:0]b3;
+
+reg a;
+
+integer j = -Nr - 1;
+
+
+always @(posedge clk or posedge reset) begin
+ 
+  if (reset) begin
+   j = -Nr - 1;
+   a1 <= 128'h0;
+   a4 <= 128'h0; 
+   state<=128'h0;
+  end
+  else begin
+   if(j==0) begin 
+     a1 = a3;
+     state = a3;
+     j = j + 1;
+   end
+   else if(j>0 && j< Nr - 1) begin
+     a1 = a2; 
+     state = a2; 
+     j = j + 1; 
+   end
+   else if(j == Nr - 1) begin 
+     a4 = a2;
+     state = a2; 
+     j = j + 1;	 
+   end
+   else if(j>= Nr)  begin
+     state = b3;
+   end
+   else j = j+1;
+  end
+end
+
+
+always @(s1,s2) begin
+   j = -Nr - 1;
+   a1 <= 128'h0;
+   a4 <= 128'h0; 
+   state<=128'h0;
+end
+
+
+KeyExpansion #(Nk,Nr)ke(key,word);
+addRoundKey ar (in,word[127:0],a3);
+DRound dr(a1,word[128*j+:128],a2);
+InvShiftRows Isf(a4,b1);
+InvsubBytes Isb(b1,b2);
+addRoundKey addrk(b2,word[128*Nr+:128],b3);
+
+endmodule

@@ -1,0 +1,54 @@
+module mixColumns(input [0:127]state,output  [0:127] out);
+function [0:7]MB2;
+ input [0:7]in; 
+if (in[0] == 0) MB2 = in << 1;
+else MB2 = (in << 1)^8'h1b;
+
+
+ endfunction
+
+function [0:7]MB3;
+ input [0:7]in;
+ 
+  MB3 = MB2(in)^in;
+
+ endfunction
+
+
+reg [0:127]temp;
+
+
+always @(*) begin
+//s 0,c
+temp[0:7] =    { MB2(state[0:7]) ^ (MB2(state[8:15]) ^ state[8:15]) ^ state[16:23] ^ state[24:31] };
+temp[32:39] =  { MB2(state[32:39]) ^ (MB2(state[40:47]) ^ state[40:47]) ^ state[48:55] ^ state[56:63] };
+temp[64:71] =  { MB2(state[64:71]) ^ (MB2(state[72:79]) ^ state[72:79]) ^ state[80:87] ^ state[88:95] };
+temp[96:103] = { MB2(state[96:103]) ^ (MB2(state[104:111]) ^ state[104:111]) ^ state[112:119] ^ state[120:127] };
+
+//s 1,c
+temp[8:15] =  { state[0:7] ^ MB2(state[8:15]) ^ (MB2(state[16:23]) ^ state[16:23]) ^ state[24:31] };
+temp[40:47] = { state[32:39] ^ MB2(state[40:47]) ^ (MB2(state[48:55]) ^ state[48:55]) ^ state[56:63] };
+temp[72:79] =  { state[64:71] ^ MB2(state[72:79]) ^ (MB2(state[80:87]) ^ state[80:87]) ^ state[88:95] };
+temp[104:111] =  { state[96:103] ^ MB2(state[104:111]) ^ (MB2(state[112:119]) ^ state[112:119]) ^ state[120:127] };
+
+//s 2,c
+temp[16:23] = { state[0:7] ^ state[8:15] ^ MB2(state[16:23]) ^ (MB2(state[24:31]) ^ state[24:31]) };
+temp[48:55] = { state[32:39] ^ state[40:47] ^ MB2(state[48:55]) ^ (MB2(state[56:63]) ^ state[56:63]) };
+temp[80:87] = { state[64:71] ^ state[72:79] ^ MB2(state[80:87]) ^ (MB2(state[88:95]) ^ state[88:95]) };
+temp[112:119] = { state[96:103] ^ state[104:111] ^ MB2(state[112:119]) ^ (MB2(state[120:127]) ^ state[120:127]) };
+
+//s 3,c
+temp[24:31] =  { (MB2(state[0:7]) ^ state[0:7]) ^ state[8:15] ^ state[16:23] ^ MB2(state[24:31]) };
+temp[56:63] =  { (MB2(state[32:39]) ^ state[32:39]) ^ state[40:47] ^ state[48:55] ^ MB2(state[56:63]) };
+temp[88:95] =  { (MB2(state[64:71]) ^ state[64:71]) ^ state[72:79] ^ state[80:87] ^ MB2(state[88:95]) };
+temp[120:127] = { (MB2(state[96:103]) ^ state[96:103]) ^ state[104:111] ^ state[112:119] ^ MB2(state[120:127]) };
+
+end
+
+assign out = temp;
+
+
+
+
+endmodule
+
